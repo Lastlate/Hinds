@@ -5,15 +5,15 @@ from datetime import datetime
 from time import sleep
 from bs4 import BeautifulSoup
 from humanfriendly import format_timespan, format_size, format_number, format_length
-import time, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, pytz, urllib, urllib.parse,subprocess
+import time, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, pytz, urllib, urllib.parse,subprocess,GACSender
 from gtts import gTTS
 from googletrans import Translator
 import traceback
 #﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏=========#
 botStart = time.time()
 
-#nadya = LINE()
-nadya = LINE("EuQJiyblKhSaeB7Z9mi2.7qnUaf2xdVehkazg6raUOG.LSRXf27Qaz+pgDWJzcLDg0Adclqs8d7m0dI0iFuT3SQ=")
+nadya = LINE()
+#nadya = LINE("EuQJiyblKhSaeB7Z9mi2.7qnUaf2xdVehkazg6raUOG.LSRXf27Qaz+pgDWJzcLDg0Adclqs8d7m0dI0iFuT3SQ=")
 #nadya = LINE("EtmMhF2OvDxCvHnQiNF0.XBLaLd+oTWf2dEx7phQOia.Uuo21tbUNcVDr8M2mOBcv0y7o77p1tj9XZbyI3uI43g=")
 #nadya = LINE("megadamns123@gmail.com","grimkung1")
 nadya.log("Auth Token : " + str(nadya.authToken))
@@ -334,7 +334,7 @@ def lineBot(op):
             group = nadya.getGroup(op.param1)
             if settings["autoJoin"] == True:
                 nadya.acceptGroupInvitation(op.param1)
-                nadya.sendMessage(op.param1, "งาย(｀・ω・´)")
+                nadya.sendMessage(op.param1, "ขณะนี้มีการเชิญสมาชิกเข้ากลุ่ม")
         if op.type == 17:
            print ("Member Joined")
            if settings["greetings"] == True:
@@ -352,7 +352,7 @@ def lineBot(op):
                nadya.sendContact(op.param1, op.param2)
                nadya.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
         if op.type == 11:
-            nadya.sendMessage(op.param1, "ขณะนี้มีการเปิด/ปิดลิงค์กลุ่ม(｀・ω・´)")
+            nadya.sendMessage(op.param1, "ขณะนี้มีการเปลี่ยนแปลงการตั้งค่ากลุ่ม(｀・ω・´)")
         if op.type == 25:
             print ("[ 25 ] ส่งข้อความแล้วー═✠〆ⁱˡˡᵘˢᵗᵉᵈ✠͜͡ই❥─")
             msg = op.message

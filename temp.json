@@ -4,9 +4,11 @@
     "autoJoinTicket": false,
     "autoLeave": false,
     "autoRead": false,
+    "autoblock": true,
     "blacklist": {
         "uf6b0fecdf26459e6a48b5a387c1144d2": true
     },
+    "bye": true,
     "canceljoin": false,
     "cancelprotect": false,
     "changeGroupPicture": {},
@@ -14,9 +16,11 @@
     "checkSticker": false,
     "dblack": false,
     "dblacklist": false,
-    "detectMention": false,
+    "detectMention": true,
+    "greetings": true,
     "inviteprotect": false,
     "keyCommand": "",
+    "kickMention": false,
     "kickjoin": false,
     "lang": "JP",
     "mimic": {

@@ -249,6 +249,22 @@ class Talk(object):
         path = self.downloadFileURL(url, 'path')
         return self.sendFile(to, path, fileName)
         return self.deleteFile(path)
+        
+    @loggedIn
+    def sendMentionFooter(self, to, text, mid, link, icon, footer):
+        arr = []
+        list_text=''
+        list_text+=' @dzin '
+        text=text+list_text
+        name='@dzin '
+        ln_text=text.replace('\n',' ')
+        if ln_text.find(name):
+            line_s=int(ln_text.index(name))
+            line_e=(int(line_s)+int(len(name)))
+        arrData={'S': str(line_s), 'E': str(line_e), 'M': mid}
+        arr.append(arrData)
+        contentMetadata={'AGENT_LINK': link, 'AGENT_ICON': icon, 'AGENT_NAME': footer,'MENTION':str('{"MENTIONEES":' + json.dumps(arr).replace(' ','') + '}')}
+        return self.sendMessage(to, text, contentMetadata)
 
     """Contact"""
         
@@ -335,6 +351,9 @@ class Talk(object):
             self.updateProfileCoverById(self.getProfileCoverId(mid))
         self.updateProfileAttribute(8, profile.pictureStatus)
         return self.updateProfile(profile)
+        
+    def getHiddenContactMids(self):
+        return self.Talk.client.getHiddenContactMids()
 
     """Group"""
 

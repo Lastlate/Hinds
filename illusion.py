@@ -22,8 +22,8 @@ nadya.log("Auth Token : " + str(nadya.authToken))
 channelToken = nadya.getChannelResult()
 nadya.log("Channel Token : " + str(channelToken))
 
-km = LINE()
-km.log("Auth Token : " + str(nadya.authToken))
+#km = LINE()
+#km.log("Auth Token : " + str(nadya.authToken))
 
 nadyaMID = nadya.profile.mid
 nadyaProfile = nadya.getProfile()

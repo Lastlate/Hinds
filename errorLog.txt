@@ -201,3 +201,9 @@
 [<module 'time' (built-in)>] 'copy'
 [<module 'time' (built-in)>] 'copy'
 [<module 'time' (built-in)>] 'LINE' object has no attribute 'sendText'
+[<module 'time' (built-in)>] 'MENTION'
+[<module 'time' (built-in)>] 'MENTION'
+[<module 'time' (built-in)>] 'LINE' object has no attribute 'sendText'
+[<module 'time' (built-in)>] TalkException(code=73, reason='Prevented join by ticket: 1489765160, 746073241', parameterMap=None)
+[<module 'time' (built-in)>] 'LINE' object has no attribute 'sendText'
+[<module 'time' (built-in)>] name 'sendMessage' is not defined

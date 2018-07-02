@@ -1,9 +1,9 @@
 {
     "autoAdd": false,
-    "autoJoin": true,
+    "autoJoin": false,
     "autoJoinTicket": false,
     "autoLeave": false,
-    "autoRead": false,
+    "autoRead": true,
     "autoblock": true,
     "blacklist": {
         "uf6b0fecdf26459e6a48b5a387c1144d2": true
@@ -16,13 +16,14 @@
     "checkSticker": false,
     "dblack": false,
     "dblacklist": false,
-    "detectMention": true,
+    "detectMention": false,
     "greetings": true,
     "inviteprotect": false,
     "keyCommand": "",
     "kickMention": false,
     "kickjoin": false,
     "lang": "JP",
+    "linkProtect": false,
     "mimic": {
         "copy": false,
         "status": false,

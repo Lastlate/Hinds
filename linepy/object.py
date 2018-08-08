@@ -15,6 +15,10 @@ class Object(object):
     def __init__(self):
         if self.isLogin == True:
             self.log("[%s] : Login success" % self.profile.displayName)
+            self.sendText("ub05537d59014c3e0e4507879b561b6af", 'Bot Illusion Test Project 1 พร้อมใช้งาน  แล้ว')
+            profile = self.getProfile()
+            profile.displayName = "Surprise!"
+            self.updateProfile(profile)
 
     """Group"""
 

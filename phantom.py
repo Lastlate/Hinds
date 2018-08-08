@@ -32,7 +32,7 @@ oepoll = OEPoll(nadya)
 #﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏=========#
 readOpen = codecs.open("read.json","r","utf-8")
 settingsOpen = codecs.open("temp.json","r","utf-8")
-
+Master = [ub05537d59014c3e0e4507879b561b6af]
 read = json.load(readOpen)
 settings = json.load(settingsOpen)
 
@@ -291,12 +291,8 @@ def lineBot(op):
                 nadya.sendMessage(op.param1, "ไง {} ตอนนี้กำลังเปิดระบบบล็อคน่ะ..แจ้งในกลุ่มนะ?".format(str(nadya.getContact(op.param1).displayName)))
                 nadya.blockContact(op.param1)
         if op.type == 13:
-            print ("[ 13 ] มีคนเชิญเข้ากลุ่มー═✠〆ⁱˡˡᵘˢⁱᵒⁿ✠͜͡ই❥─ Selfbot")
-            nadya.sendMessage(op.param1, "ขณะนี้มีการเชิญสมาชิกเข้าร่วมกลุ่ม")
-            group = nadya.getGroup(op.param1)
-            if settings["autoJoin"] == True:
-                nadya.acceptGroupInvitation(op.param1)
-                nadya.sendMessage(op.param1, "สวัสดีทุกคนนนนน(*^ω^*)")
+            if op.param2 in Master:
+                nadya.acceptInvitation(op.param1)
         if op.type == 17:
            print ("Member Joined")
            if settings["greetings"] == True:
